@@ -25,7 +25,7 @@ public interface IUnionFind {
 	public int find(int x);
 
 	/**
-	 * Returns true iff p and q are in the same set, false otherwise
+	 * Returns true if p and q are in the same set, false otherwise
 	 */
 	public boolean connected(int p, int q);
 

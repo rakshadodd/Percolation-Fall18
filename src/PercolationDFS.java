@@ -127,5 +127,5 @@ public class PercolationDFS implements IPercolate {
 		if (col < 0 || col >= myGrid[0].length) return false;
 		return true;
 	}
-
+	
 }
