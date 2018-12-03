@@ -1,12 +1,6 @@
 Raksha Doddabele
 rsd35
 
-Copy/Paste results from PercolationStats using PercolationDFS
-grid	mean	stddev	time
-100	0.593	0.014	1.661
-200	0.591	0.010	14.810
-400	0.590	0.006	209.451
-
 Copy/Paste results from PercolationStats using PercolationDFSFast
 grid	mean	stddev	time
 100	0.593	0.014	0.216
@@ -25,16 +19,22 @@ grid	mean	stddev	time
 
 Copy/Paste results from PercolationStats using PercolationUF 
 with the QuickUWPC UnionFind implementation.
+simulation data for 20 trials
 grid	mean	stddev	time
-100	0.593	0.014	1.661
-200	0.591	0.010	14.810
-400	0.590	0.006	209.451
-800	0.594	0.004	4086.300
+100	0.593	0.014	0.572
+200	0.591	0.010	0.477
+400	0.590	0.006	1.142
+800	0.594	0.004	8.891
+1600	0.592	0.002	53.008
+3200	0.593	0.001	447.192
 
 1. How does doubling the grid size affect running time (keeping # trials fixed)
-
+Doubling the grid size causes the running time to increase exponentially.
 
 2. How does doubling the number of trials affect running time.
-
+It seems to roughly double the running time. 
 
 3. Estimate the largest grid size you can run in 24 hours with 20 trials. Explain your reasoning.
+	There are 86400 seconds in a day. After graphing the runtime numbers above, I ended up with a regression
+	equation of y= .00002x^2. Setting 86400 equal to y and solving for x gave me a grid size of about
+	65,500. So the largest grid size my computer could run in 24 hours is about 65500. 

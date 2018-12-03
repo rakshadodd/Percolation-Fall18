@@ -74,7 +74,12 @@ public class PercolationDFS implements IPercolate {
 			}
 		}
 	}
-
+	/**
+	 * calls dfs if the given cell needs to be marked full, which happens if the cell is in the the top row
+	 * or adjacent to a full cell
+	 * @param row is the row coordinate of the cell being checked/marked
+	 * @param col is the col coordinate of the cell being checked/marked
+	 */
 	protected void updateOnOpen(int row, int col) {
 		clearFull();
 		for (int k = 0; k < myGrid[0].length; k++)
